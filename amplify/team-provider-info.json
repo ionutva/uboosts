@@ -22,7 +22,7 @@
           "EMAILSUBJECT": "uBoosts Account Confirmation",
           "EMAILMESSAGE": "Click here to verify your email: ",
           "deploymentBucketName": "amplify-amplify97c94e24b9b74-staging-62536-deployment",
-          "s3Key": "amplify-builds/uboosts0d0125f8CustomMessage-4971717a615871613536-build.zip"
+          "s3Key": "amplify-builds/uboosts0d0125f8CustomMessage-6154345452764472626e-build.zip"
         }
       }
     }
