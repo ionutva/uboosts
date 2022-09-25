@@ -1,0 +1,14 @@
+{
+  "resourceName": "photos",
+  "policyUUID": "a3bd8605",
+  "bucketName": "uboostsphotos",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
