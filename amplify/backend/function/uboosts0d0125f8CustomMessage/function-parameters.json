@@ -1,0 +1,26 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "uboosts0d0125f8",
+  "functionName": "uboosts0d0125f8CustomMessage",
+  "resourceName": "uboosts0d0125f8CustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": [
+    {
+      "key": "RESOURCENAME",
+      "value": "resourceName"
+    }
+  ],
+  "triggerDir": "C:\\snapshot\\repo\\build\\node_modules\\@aws-amplify\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "triggerEventPath": "CustomMessage.event.json",
+  "roleName": "uboosts0d0125f8CustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "uboosts.com",
+  "EMAILSUBJECT": "uBoosts Account Confirmation",
+  "EMAILMESSAGE": "Click here to verify your email: ",
+  "RESOURCENAME": "resourceName",
+  "enableCors": false
+}
