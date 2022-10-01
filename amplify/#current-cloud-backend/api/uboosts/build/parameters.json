@@ -1,0 +1,13 @@
+{
+    "AppSyncApiName": "uboosts",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "S3DeploymentBucket": "amplify-amplify97c94e24b9b74-staging-62536-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/9b62e5a7e3bb7c48d239031047d8e736ad81fb3c"
+}
