@@ -11,7 +11,7 @@ const IconsTimeline = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag='h4'>Icons</CardTitle>
+        <CardTitle tag='h4'>Activities</CardTitle>
       </CardHeader>
       <CardBody>
         <Timeline data={iconsData} />

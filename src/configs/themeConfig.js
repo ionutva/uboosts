@@ -4,7 +4,7 @@
 const themeConfig = {
   app: {
     appName: 'uBoosts',
-    appLogoImage: require('@src/assets/images/logo/logo.svg').default
+    appLogoImage: require('@src/assets/images/logo/logo.png').default
   },
   layout: {
     isRTL: false,
@@ -18,7 +18,7 @@ const themeConfig = {
     navbar: {
       // ? For horizontal menu, navbar type will work for navMenu type
       type: 'floating', // static , sticky , floating, hidden
-      backgroundColor: 'white' // BS color options [primary, success, etc]
+      backgroundColor: 'gray' // BS color options [primary, success, etc]
     },
     footer: {
       type: 'static' // static, sticky, hidden
