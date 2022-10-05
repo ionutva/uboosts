@@ -8,7 +8,7 @@ const themeConfig = {
   },
   layout: {
     isRTL: false,
-    skin: 'semi-dark', // light, dark, bordered, semi-dark
+    skin: 'dark', // light, dark, bordered, semi-dark
     type: 'vertical', // vertical, horizontal
     contentWidth: 'boxed', // full, boxed
     menu: {
@@ -17,8 +17,8 @@ const themeConfig = {
     },
     navbar: {
       // ? For horizontal menu, navbar type will work for navMenu type
-      type: 'floating', // static , sticky , floating, hidden
-      backgroundColor: 'gray' // BS color options [primary, success, etc]
+      type: 'sticky', // static , sticky , floating, hidden
+      backgroundColor: 'white' // BS color options [primary, success, etc]
     },
     footer: {
       type: 'static' // static, sticky, hidden
