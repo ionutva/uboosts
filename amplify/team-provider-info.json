@@ -22,8 +22,29 @@
           "EMAILSUBJECT": "uBoosts Account Confirmation",
           "EMAILMESSAGE": "Click here to verify your email: ",
           "deploymentBucketName": "amplify-amplify97c94e24b9b74-staging-62536-deployment",
-          "s3Key": "amplify-builds/uboosts0d0125f8CustomMessage-6154345452764472626e-build.zip"
+          "s3Key": "amplify-builds/uboosts0d0125f8CustomMessage-6a35473372386f765339-build.zip"
         }
+      }
+    }
+  },
+  "test": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-uboosts-test-224842-authRole",
+      "UnauthRoleArn": "arn:aws:iam::657271126817:role/amplify-uboosts-test-224842-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::657271126817:role/amplify-uboosts-test-224842-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-uboosts-test-224842-deployment",
+      "UnauthRoleName": "amplify-uboosts-test-224842-unauthRole",
+      "StackName": "amplify-uboosts-test-224842",
+      "StackId": "arn:aws:cloudformation:eu-central-1:657271126817:stack/amplify-uboosts-test-224842/baa907c0-44e6-11ed-9d94-020aeb45e49c",
+      "AmplifyAppId": "d1pp2sez9clg6y"
+    },
+    "categories": {
+      "auth": {
+        "uboosts0d0125f8": {}
+      },
+      "function": {
+        "uboosts0d0125f8CustomMessage": {}
       }
     }
   }
