@@ -94,7 +94,7 @@ const Register = () => {
   return (
     <div className='auth-wrapper auth-cover'>
       <Row className='auth-inner m-0'>
-        <Link className='brand-logo' to='/' onClick={e => e.preventDefault()}>
+        {/* <Link className='brand-logo' to='/' onClick={e => e.preventDefault()}>
           <svg viewBox='0 0 139 95' version='1.1' height='28'>
             <defs>
               <linearGradient x1='100%' y1='10.5120544%' x2='50%' y2='89.4879456%' id='linearGradient-1'>
@@ -144,7 +144,7 @@ const Register = () => {
             </g>
           </svg>
           <h2 className='brand-text text-primary ms-1'>Vuexy</h2>
-        </Link>
+        </Link> */}
         <Col className='d-none d-lg-flex align-items-center p-5' lg='8' sm='12'>
           <div className='w-100 d-lg-flex align-items-center justify-content-center px-5'>
             <img className='img-fluid' src={source} alt='Login Cover' />
@@ -155,7 +155,7 @@ const Register = () => {
             <CardTitle tag='h2' className='fw-bold mb-1'>
               Adventure starts here 🚀
             </CardTitle>
-            <CardText className='mb-2'>Make your app management easy and fun!</CardText>
+            <CardText className='mb-2'>Make your progress easy and fun!</CardText>
 
             <Form action='/' className='auth-register-form mt-2' onSubmit={handleSubmit(onSubmit)}>
               <div className='mb-1'>
@@ -231,14 +231,8 @@ const Register = () => {
               <Button color='facebook'>
                 <Facebook size={14} />
               </Button>
-              <Button color='twitter'>
-                <Twitter size={14} />
-              </Button>
               <Button color='google'>
                 <Mail size={14} />
-              </Button>
-              <Button className='me-0' color='github'>
-                <GitHub size={14} />
               </Button>
             </div>
           </Col>
