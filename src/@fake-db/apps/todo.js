@@ -1,10 +1,15 @@
+import { useEffect } from 'react'
 import mock from '../mock'
+
+import { API } from 'aws-amplify'
+import { listTasks } from '../../graphql/queries'
+
 
 const data = {
   tasks: [
     {
       id: 1,
-      title: 'Entire change break our wife wide it daughter mention member.',
+      title: 'Entire change break our wife wide it daughter mention membertttt.',
       dueDate: '2020-11-25',
       description:
         'Chocolate cake topping bonbon jujubes donut sweet wafer. Marzipan gingerbread powder brownie bear claw. Chocolate bonbon sesame snaps jelly caramels oat cake.',
@@ -259,7 +264,7 @@ const data = {
     },
     {
       id: 18,
-      title: 'Fix Responsiveness for new structure 💻',
+      title: 'Fix Responsiveness for new structbbbu 💻',
       dueDate: '2020-11-18',
       description:
         'Chocolate cake topping bonbon jujubes donut sweet wafer. Marzipan gingerbread powder brownie bear claw. Chocolate bonbon sesame snaps jelly caramels oat cake.',
@@ -273,12 +278,28 @@ const data = {
       isImportant: true
     }
   ]
-}
+};
+
+
 
 // ------------------------------------------------
 // GET: Return Tasks
 // ------------------------------------------------
 mock.onGet('/apps/todo/tasks').reply(config => {
+  const pullData = async () => {
+    const info = await API.graphql({ query: listTasks })
+    console.log(data)
+    console.log(info)
+    console.log(info.data.listTasks.items)
+    data.tasks.push(info.data.listTasks.items[1])
+    debugger
+
+
+  }
+
+  pullData();
+
+
   // eslint-disable-next-line object-curly-newline
   const { q = '', filter, tag, sortBy: sortByParam = 'latest' } = config.params
   /* eslint-enable */

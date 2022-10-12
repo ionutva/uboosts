@@ -155,9 +155,9 @@
     "AuthTriggerCustomLambdaStack": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify97c94e24b9b74-staging-62536-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-151451-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json",
         "Parameters": {
-          "env": "staging",
+          "env": "dev",
           "userpoolId": {
             "Fn::GetAtt": [
               "authuboosts0d0125f8",
@@ -192,23 +192,20 @@
     "functionuboosts0d0125f8CustomMessage": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify97c94e24b9b74-staging-62536-deployment/amplify-cfn-templates/function/uboosts0d0125f8CustomMessage-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-151451-deployment/amplify-cfn-templates/function/uboosts0d0125f8CustomMessage-cloudformation-template.json",
         "Parameters": {
           "modules": "verification-link",
           "resourceName": "uboosts0d0125f8CustomMessage",
-          "REDIRECTURL": "uboosts.com",
-          "EMAILSUBJECT": "uBoosts Account Confirmation",
-          "EMAILMESSAGE": "Click here to verify your email: ",
-          "deploymentBucketName": "amplify-amplify97c94e24b9b74-staging-62536-deployment",
-          "s3Key": "amplify-builds/uboosts0d0125f8CustomMessage-6a35473372386f765339-build.zip",
-          "env": "staging"
+          "deploymentBucketName": "amplify-uboosts-dev-151451-deployment",
+          "s3Key": "amplify-builds/uboosts0d0125f8CustomMessage-614f716a697769554a52-build.zip",
+          "env": "dev"
         }
       }
     },
     "authuboosts0d0125f8": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify97c94e24b9b74-staging-62536-deployment/amplify-cfn-templates/auth/uboosts0d0125f8-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-151451-deployment/amplify-cfn-templates/auth/uboosts0d0125f8-cloudformation-template.json",
         "Parameters": {
           "identityPoolName": "uboosts0d0125f8_identitypool_0d0125f8",
           "allowUnauthenticatedIdentities": false,
@@ -258,29 +255,34 @@
           "dependsOn": "[object Object]",
           "permissions": "",
           "authTriggerConnections": "{\"triggerType\":\"CustomMessage\",\"lambdaFunctionName\":\"uboosts0d0125f8CustomMessage\"}",
-          "env": "staging"
+          "env": "dev"
         }
       }
     },
     "apiuboosts": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify97c94e24b9b74-staging-62536-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-151451-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "Parameters": {
           "AppSyncApiName": "uboosts",
           "DynamoDBBillingMode": "PAY_PER_REQUEST",
           "DynamoDBEnableServerSideEncryption": false,
-          "AuthModeLastUpdated": "2022-09-25T16:50:12.904Z",
-          "S3DeploymentBucket": "amplify-amplify97c94e24b9b74-staging-62536-deployment",
-          "S3DeploymentRootKey": "amplify-appsync-files/9b62e5a7e3bb7c48d239031047d8e736ad81fb3c",
-          "env": "staging"
+          "authRoleName": {
+            "Ref": "AuthRoleName"
+          },
+          "unauthRoleName": {
+            "Ref": "UnauthRoleName"
+          },
+          "S3DeploymentBucket": "amplify-uboosts-dev-151451-deployment",
+          "S3DeploymentRootKey": "amplify-appsync-files/b27a151250594a5050655cb79dd6e92d43528da9",
+          "env": "dev"
         }
       }
     },
     "storagephotos": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-amplify97c94e24b9b74-staging-62536-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-151451-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
         "Parameters": {
           "bucketName": "uboostsphotos",
           "selectedGuestPermissions": "",
@@ -306,7 +308,7 @@
           "s3PermissionsAuthenticatedUploads": "s3:PutObject",
           "s3PermissionsGuestPublic": "DISALLOW",
           "s3PermissionsGuestUploads": "DISALLOW",
-          "env": "staging"
+          "env": "dev"
         }
       }
     },

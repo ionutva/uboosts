@@ -1,8 +1,5 @@
 {
-  "staging": {
-    "configLevel": "amplifyAdmin"
-  },
-  "test": {
+  "dev": {
     "configLevel": "amplifyAdmin"
   }
 }

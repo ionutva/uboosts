@@ -49,6 +49,11 @@ import './assets/scss/style.scss'
 // ** Service Worker
 import * as serviceWorker from './serviceWorker'
 
+import { Amplify } from 'aws-amplify'
+import config from './aws-exports'
+
+Amplify.configure(config);
+
 // ** Lazy load app
 const LazyApp = lazy(() => import('./App'))
 

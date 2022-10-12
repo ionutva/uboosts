@@ -2,7 +2,12 @@
     "AppSyncApiName": "uboosts",
     "DynamoDBBillingMode": "PAY_PER_REQUEST",
     "DynamoDBEnableServerSideEncryption": false,
-    "AuthModeLastUpdated": "2022-09-25T16:50:12.904Z",
-    "S3DeploymentBucket": "amplify-uboosts-test-224842-deployment",
-    "S3DeploymentRootKey": "amplify-appsync-files/3584fcc937f39b78efd9403dc9328572ab36b380"
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "S3DeploymentBucket": "amplify-uboosts-dev-151451-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/b27a151250594a5050655cb79dd6e92d43528da9"
 }
