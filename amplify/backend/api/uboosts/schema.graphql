@@ -1,16 +1,18 @@
-input Assignee{
-  fullName: String
-  avatar: String
-}
+
 
 type Task @model @auth(rules: [{allow: public}]) {
   id: ID!
   title: String
   dueDate: AWSDate
   description: String
-  assignee: Assignee! @hasOne
+  assignee: Assignee
   tags: [String]
   isCompleted: Boolean
   isDeleted: Boolean
   isImportant: Boolean
+}
+
+type Assignee{
+  fullName: String
+  avatar: String
 }

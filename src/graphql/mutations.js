@@ -1,48 +1,81 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createNote = /* GraphQL */ `
-  mutation CreateNote(
-    $input: CreateNoteInput!
-    $condition: ModelNoteConditionInput
+export const createTask = /* GraphQL */ `
+  mutation CreateTask(
+    $input: CreateTaskInput!
+    $condition: ModelTaskConditionInput
   ) {
-    createNote(input: $input, condition: $condition) {
+    createTask(input: $input, condition: $condition) {
       id
-      name
+      title
+      dueDate
       description
-      image
+      assignee {
+        fullName
+        avatar
+      }
+      tags
+      isCompleted
+      isDeleted
+      isImportant
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
-export const updateNote = /* GraphQL */ `
-  mutation UpdateNote(
-    $input: UpdateNoteInput!
-    $condition: ModelNoteConditionInput
+export const updateTask = /* GraphQL */ `
+  mutation UpdateTask(
+    $input: UpdateTaskInput!
+    $condition: ModelTaskConditionInput
   ) {
-    updateNote(input: $input, condition: $condition) {
+    updateTask(input: $input, condition: $condition) {
       id
-      name
+      title
+      dueDate
       description
-      image
+      assignee {
+        fullName
+        avatar
+      }
+      tags
+      isCompleted
+      isDeleted
+      isImportant
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
-export const deleteNote = /* GraphQL */ `
-  mutation DeleteNote(
-    $input: DeleteNoteInput!
-    $condition: ModelNoteConditionInput
+export const deleteTask = /* GraphQL */ `
+  mutation DeleteTask(
+    $input: DeleteTaskInput!
+    $condition: ModelTaskConditionInput
   ) {
-    deleteNote(input: $input, condition: $condition) {
+    deleteTask(input: $input, condition: $condition) {
       id
-      name
+      title
+      dueDate
       description
-      image
+      assignee {
+        fullName
+        avatar
+      }
+      tags
+      isCompleted
+      isDeleted
+      isImportant
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;

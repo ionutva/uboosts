@@ -285,21 +285,13 @@ const data = {
 // ------------------------------------------------
 // GET: Return Tasks
 // ------------------------------------------------
-mock.onGet('/apps/todo/tasks').reply(config => {
-  const pullData = async () => {
+//let data = {};
+
+mock.onGet('/apps/todo/tasks').reply(async config => {
+  
     const info = await API.graphql({ query: listTasks })
-    console.log(data)
-    console.log(info)
-    console.log(info.data.listTasks.items)
-    data.tasks.push(info.data.listTasks.items[1])
-    debugger
-
-
-  }
-
-  pullData();
-
-
+    //data.tasks = info.data.listTasks.items
+  
   // eslint-disable-next-line object-curly-newline
   const { q = '', filter, tag, sortBy: sortByParam = 'latest' } = config.params
   /* eslint-enable */

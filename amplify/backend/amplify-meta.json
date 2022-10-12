@@ -24,7 +24,7 @@
         "Name": "uboosts0d0125f8CustomMessage-dev",
         "LambdaExecutionRole": "uboosts0d0125f8CustomMessage-dev"
       },
-      "lastPushTimeStamp": "2022-10-12T06:56:52.254Z",
+      "lastPushTimeStamp": "2022-10-12T10:11:18.227Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-151451-deployment/amplify-cfn-templates/function/uboosts0d0125f8CustomMessage-cloudformation-template.json",
         "logicalId": "functionuboosts0d0125f8CustomMessage"
@@ -78,7 +78,7 @@
         "IdentityPoolName": "uboosts0d0125f8_identitypool_0d0125f8__dev",
         "UserPoolName": "uboosts0d0125f8_userpool_0d0125f8"
       },
-      "lastPushTimeStamp": "2022-10-12T06:56:52.257Z",
+      "lastPushTimeStamp": "2022-10-12T10:11:18.235Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-151451-deployment/amplify-cfn-templates/auth/uboosts0d0125f8-cloudformation-template.json",
         "logicalId": "authuboosts0d0125f8"
@@ -109,12 +109,12 @@
         "GraphQLAPIEndpointOutput": "https://v22e5s3v4na7lawkbprfxotigq.appsync-api.eu-central-1.amazonaws.com/graphql",
         "GraphQLAPIKeyOutput": "da2-6hxueqrgprabhgs4uj25fhevbq"
       },
-      "lastPushTimeStamp": "2022-10-12T06:57:00.460Z",
+      "lastPushTimeStamp": "2022-10-12T10:11:23.869Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-151451-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apiuboosts"
       },
-      "lastPushDirHash": "3k8AaPr0VT5A6xUAoWPIs7Izyzw="
+      "lastPushDirHash": "wyjBvt2PC4/o9VnXza9Mx538FFY="
     }
   },
   "storage": {
@@ -126,7 +126,7 @@
         "BucketName": "uboostsphotos151451-dev",
         "Region": "eu-central-1"
       },
-      "lastPushTimeStamp": "2022-10-12T06:56:53.604Z",
+      "lastPushTimeStamp": "2022-10-12T10:11:18.241Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-151451-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
         "logicalId": "storagephotos"

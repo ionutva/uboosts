@@ -1,14 +1,24 @@
 
-type Note @aws_iam @aws_api_key {
+type Task @aws_iam @aws_api_key {
   id: ID!
-  name: String!
+  title: String
+  dueDate: AWSDate
   description: String
-  image: String
+  assignee: Assignee
+  tags: [String]
+  isCompleted: Boolean
+  isDeleted: Boolean
+  isImportant: Boolean
   createdAt: AWSDateTime!
   updatedAt: AWSDateTime!
   _version: Int!
   _deleted: Boolean
   _lastChangedAt: AWSTimestamp!
+}
+
+type Assignee @aws_iam @aws_api_key {
+  fullName: String
+  avatar: String
 }
 
 input ModelStringInput {
@@ -161,67 +171,90 @@ enum ModelSortDirection {
   DESC
 }
 
-type ModelNoteConnection @aws_api_key @aws_iam {
-  items: [Note]!
+input AssigneeInput {
+  fullName: String
+  avatar: String
+}
+
+type ModelTaskConnection @aws_api_key @aws_iam {
+  items: [Task]!
   nextToken: String
   startedAt: AWSTimestamp
 }
 
-input ModelNoteFilterInput {
+input ModelTaskFilterInput {
   id: ModelIDInput
-  name: ModelStringInput
+  title: ModelStringInput
+  dueDate: ModelStringInput
   description: ModelStringInput
-  image: ModelStringInput
-  and: [ModelNoteFilterInput]
-  or: [ModelNoteFilterInput]
-  not: ModelNoteFilterInput
+  tags: ModelStringInput
+  isCompleted: ModelBooleanInput
+  isDeleted: ModelBooleanInput
+  isImportant: ModelBooleanInput
+  and: [ModelTaskFilterInput]
+  or: [ModelTaskFilterInput]
+  not: ModelTaskFilterInput
 }
 
 type Query {
-  getNote(id: ID!): Note @aws_api_key @aws_iam
-  listNotes(filter: ModelNoteFilterInput, limit: Int, nextToken: String): ModelNoteConnection @aws_api_key @aws_iam
-  syncNotes(filter: ModelNoteFilterInput, limit: Int, nextToken: String, lastSync: AWSTimestamp): ModelNoteConnection @aws_api_key @aws_iam
+  getTask(id: ID!): Task @aws_api_key @aws_iam
+  listTasks(filter: ModelTaskFilterInput, limit: Int, nextToken: String): ModelTaskConnection @aws_api_key @aws_iam
+  syncTasks(filter: ModelTaskFilterInput, limit: Int, nextToken: String, lastSync: AWSTimestamp): ModelTaskConnection @aws_api_key @aws_iam
 }
 
-input ModelNoteConditionInput {
-  name: ModelStringInput
+input ModelTaskConditionInput {
+  title: ModelStringInput
+  dueDate: ModelStringInput
   description: ModelStringInput
-  image: ModelStringInput
-  and: [ModelNoteConditionInput]
-  or: [ModelNoteConditionInput]
-  not: ModelNoteConditionInput
+  tags: ModelStringInput
+  isCompleted: ModelBooleanInput
+  isDeleted: ModelBooleanInput
+  isImportant: ModelBooleanInput
+  and: [ModelTaskConditionInput]
+  or: [ModelTaskConditionInput]
+  not: ModelTaskConditionInput
 }
 
-input CreateNoteInput {
+input CreateTaskInput {
   id: ID
-  name: String!
+  title: String
+  dueDate: AWSDate
   description: String
-  image: String
+  assignee: AssigneeInput
+  tags: [String]
+  isCompleted: Boolean
+  isDeleted: Boolean
+  isImportant: Boolean
   _version: Int
 }
 
-input UpdateNoteInput {
+input UpdateTaskInput {
   id: ID!
-  name: String
+  title: String
+  dueDate: AWSDate
   description: String
-  image: String
+  assignee: AssigneeInput
+  tags: [String]
+  isCompleted: Boolean
+  isDeleted: Boolean
+  isImportant: Boolean
   _version: Int
 }
 
-input DeleteNoteInput {
+input DeleteTaskInput {
   id: ID!
   _version: Int
 }
 
 type Mutation {
-  createNote(input: CreateNoteInput!, condition: ModelNoteConditionInput): Note @aws_api_key @aws_iam
-  updateNote(input: UpdateNoteInput!, condition: ModelNoteConditionInput): Note @aws_api_key @aws_iam
-  deleteNote(input: DeleteNoteInput!, condition: ModelNoteConditionInput): Note @aws_api_key @aws_iam
+  createTask(input: CreateTaskInput!, condition: ModelTaskConditionInput): Task @aws_api_key @aws_iam
+  updateTask(input: UpdateTaskInput!, condition: ModelTaskConditionInput): Task @aws_api_key @aws_iam
+  deleteTask(input: DeleteTaskInput!, condition: ModelTaskConditionInput): Task @aws_api_key @aws_iam
 }
 
 type Subscription {
-  onCreateNote: Note @aws_subscribe(mutations: ["createNote"]) @aws_api_key @aws_iam
-  onUpdateNote: Note @aws_subscribe(mutations: ["updateNote"]) @aws_api_key @aws_iam
-  onDeleteNote: Note @aws_subscribe(mutations: ["deleteNote"]) @aws_api_key @aws_iam
+  onCreateTask: Task @aws_subscribe(mutations: ["createTask"]) @aws_api_key @aws_iam
+  onUpdateTask: Task @aws_subscribe(mutations: ["updateTask"]) @aws_api_key @aws_iam
+  onDeleteTask: Task @aws_subscribe(mutations: ["deleteTask"]) @aws_api_key @aws_iam
 }
 

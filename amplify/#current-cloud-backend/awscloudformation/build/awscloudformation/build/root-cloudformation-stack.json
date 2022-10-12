@@ -274,7 +274,7 @@
             "Ref": "UnauthRoleName"
           },
           "S3DeploymentBucket": "amplify-uboosts-dev-151451-deployment",
-          "S3DeploymentRootKey": "amplify-appsync-files/2ebb79429377835f88776ac67b300f4a3a41fb9b",
+          "S3DeploymentRootKey": "amplify-appsync-files/5e1de83660d3142f630737b748b00504ff621aa1",
           "env": "dev"
         }
       }

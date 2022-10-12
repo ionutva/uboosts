@@ -1,16 +1,27 @@
 import { ModelInit, MutableModel } from "@aws-amplify/datastore";
 
-type NoteMetaData = {
+export declare class Assignee {
+  readonly fullName?: string | null;
+  readonly avatar?: string | null;
+  constructor(init: ModelInit<Assignee>);
+}
+
+type TaskMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
-export declare class Note {
+export declare class Task {
   readonly id: string;
-  readonly name: string;
+  readonly title?: string | null;
+  readonly dueDate?: string | null;
   readonly description?: string | null;
-  readonly image?: string | null;
+  readonly assignee?: Assignee | null;
+  readonly tags?: (string | null)[] | null;
+  readonly isCompleted?: boolean | null;
+  readonly isDeleted?: boolean | null;
+  readonly isImportant?: boolean | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
-  constructor(init: ModelInit<Note, NoteMetaData>);
-  static copyOf(source: Note, mutator: (draft: MutableModel<Note, NoteMetaData>) => MutableModel<Note, NoteMetaData> | void): Note;
+  constructor(init: ModelInit<Task, TaskMetaData>);
+  static copyOf(source: Task, mutator: (draft: MutableModel<Task, TaskMetaData>) => MutableModel<Task, TaskMetaData> | void): Task;
 }

@@ -123,7 +123,7 @@
           ]
         },
         "Description": "api key description",
-        "Expires": 1668149816
+        "Expires": 1668161259
       }
     },
     "GraphQLAPINONEDS95A13CF0": {
@@ -385,118 +385,6 @@
         "GraphQLAPITransformerSchema3CB2AE18"
       ]
     },
-    "Note": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": {
-          "Fn::Join": [
-            "",
-            [
-              "https://s3.",
-              {
-                "Ref": "AWS::Region"
-              },
-              ".",
-              {
-                "Ref": "AWS::URLSuffix"
-              },
-              "/",
-              {
-                "Ref": "S3DeploymentBucket"
-              },
-              "/",
-              {
-                "Ref": "S3DeploymentRootKey"
-              },
-              "/stacks/Note.json"
-            ]
-          ]
-        },
-        "Parameters": {
-          "DynamoDBModelTableReadIOPS": {
-            "Ref": "DynamoDBModelTableReadIOPS"
-          },
-          "DynamoDBModelTableWriteIOPS": {
-            "Ref": "DynamoDBModelTableWriteIOPS"
-          },
-          "DynamoDBBillingMode": {
-            "Ref": "DynamoDBBillingMode"
-          },
-          "DynamoDBEnablePointInTimeRecovery": {
-            "Ref": "DynamoDBEnablePointInTimeRecovery"
-          },
-          "DynamoDBEnableServerSideEncryption": {
-            "Ref": "DynamoDBEnableServerSideEncryption"
-          },
-          "referencetotransformerrootstackenv10C5A902Ref": {
-            "Ref": "env"
-          },
-          "referencetotransformerrootstackGraphQLAPI20497F53ApiId": {
-            "Fn::GetAtt": [
-              "GraphQLAPI",
-              "ApiId"
-            ]
-          },
-          "referencetotransformerrootstackS3DeploymentBucket7592718ARef": {
-            "Ref": "S3DeploymentBucket"
-          },
-          "referencetotransformerrootstackS3DeploymentRootKeyA71EA735Ref": {
-            "Ref": "S3DeploymentRootKey"
-          },
-          "referencetotransformerrootstackTaskNestedStackTaskNestedStackResource8AC104EFOutputstransformerrootstackTaskQuerygetTaskauth0FunctionQuerygetTaskauth0FunctionAppSyncFunction50E08A2CFunctionId": {
-            "Fn::GetAtt": [
-              "Task",
-              "Outputs.transformerrootstackTaskQuerygetTaskauth0FunctionQuerygetTaskauth0FunctionAppSyncFunction50E08A2CFunctionId"
-            ]
-          },
-          "referencetotransformerrootstackTaskNestedStackTaskNestedStackResource8AC104EFOutputstransformerrootstackTaskQuerygetTaskpostAuth0FunctionQuerygetTaskpostAuth0FunctionAppSyncFunction6037A9AEFunctionId": {
-            "Fn::GetAtt": [
-              "Task",
-              "Outputs.transformerrootstackTaskQuerygetTaskpostAuth0FunctionQuerygetTaskpostAuth0FunctionAppSyncFunction6037A9AEFunctionId"
-            ]
-          },
-          "referencetotransformerrootstackauthRoleNameFB872D50Ref": {
-            "Ref": "authRoleName"
-          },
-          "referencetotransformerrootstackunauthRoleName49F3C1FERef": {
-            "Ref": "unauthRoleName"
-          },
-          "referencetotransformerrootstackTaskNestedStackTaskNestedStackResource8AC104EFOutputstransformerrootstackTaskMutationcreateTaskinit0FunctionMutationcreateTaskinit0FunctionAppSyncFunctionC9BED0FAFunctionId": {
-            "Fn::GetAtt": [
-              "Task",
-              "Outputs.transformerrootstackTaskMutationcreateTaskinit0FunctionMutationcreateTaskinit0FunctionAppSyncFunctionC9BED0FAFunctionId"
-            ]
-          },
-          "referencetotransformerrootstackTaskNestedStackTaskNestedStackResource8AC104EFOutputstransformerrootstackTaskMutationcreateTaskauth0FunctionMutationcreateTaskauth0FunctionAppSyncFunction905C27E6FunctionId": {
-            "Fn::GetAtt": [
-              "Task",
-              "Outputs.transformerrootstackTaskMutationcreateTaskauth0FunctionMutationcreateTaskauth0FunctionAppSyncFunction905C27E6FunctionId"
-            ]
-          },
-          "referencetotransformerrootstackTaskNestedStackTaskNestedStackResource8AC104EFOutputstransformerrootstackTaskMutationupdateTaskinit0FunctionMutationupdateTaskinit0FunctionAppSyncFunction585C0964FunctionId": {
-            "Fn::GetAtt": [
-              "Task",
-              "Outputs.transformerrootstackTaskMutationupdateTaskinit0FunctionMutationupdateTaskinit0FunctionAppSyncFunction585C0964FunctionId"
-            ]
-          },
-          "referencetotransformerrootstackTaskNestedStackTaskNestedStackResource8AC104EFOutputstransformerrootstackTaskSubscriptiononCreateTaskauth0FunctionSubscriptiononCreateTaskauth0FunctionAppSyncFunction816CD5F3FunctionId": {
-            "Fn::GetAtt": [
-              "Task",
-              "Outputs.transformerrootstackTaskSubscriptiononCreateTaskauth0FunctionSubscriptiononCreateTaskauth0FunctionAppSyncFunction816CD5F3FunctionId"
-            ]
-          },
-          "referencetotransformerrootstackTaskNestedStackTaskNestedStackResource8AC104EFOutputstransformerrootstackTaskSubscriptionOnCreateTaskDataResolverFnSubscriptionOnCreateTaskDataResolverFnAppSyncFunctionE6E36642FunctionId": {
-            "Fn::GetAtt": [
-              "Task",
-              "Outputs.transformerrootstackTaskSubscriptionOnCreateTaskDataResolverFnSubscriptionOnCreateTaskDataResolverFnAppSyncFunctionE6E36642FunctionId"
-            ]
-          }
-        }
-      },
-      "DependsOn": [
-        "GraphQLAPITransformerSchema3CB2AE18"
-      ]
-    },
     "CustomResourcesjson": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
@@ -540,8 +428,7 @@
       "DependsOn": [
         "GraphQLAPI",
         "GraphQLAPITransformerSchema3CB2AE18",
-        "Task",
-        "Note"
+        "Task"
       ]
     }
   },

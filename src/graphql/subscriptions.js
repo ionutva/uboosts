@@ -1,39 +1,72 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateNote = /* GraphQL */ `
-  subscription OnCreateNote {
-    onCreateNote {
+export const onCreateTask = /* GraphQL */ `
+  subscription OnCreateTask {
+    onCreateTask {
       id
-      name
+      title
+      dueDate
       description
-      image
+      assignee {
+        fullName
+        avatar
+      }
+      tags
+      isCompleted
+      isDeleted
+      isImportant
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
-export const onUpdateNote = /* GraphQL */ `
-  subscription OnUpdateNote {
-    onUpdateNote {
+export const onUpdateTask = /* GraphQL */ `
+  subscription OnUpdateTask {
+    onUpdateTask {
       id
-      name
+      title
+      dueDate
       description
-      image
+      assignee {
+        fullName
+        avatar
+      }
+      tags
+      isCompleted
+      isDeleted
+      isImportant
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
-export const onDeleteNote = /* GraphQL */ `
-  subscription OnDeleteNote {
-    onDeleteNote {
+export const onDeleteTask = /* GraphQL */ `
+  subscription OnDeleteTask {
+    onDeleteTask {
       id
-      name
+      title
+      dueDate
       description
-      image
+      assignee {
+        fullName
+        avatar
+      }
+      tags
+      isCompleted
+      isDeleted
+      isImportant
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
