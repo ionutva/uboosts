@@ -1,5 +1,7 @@
 {
-  "dev": {
-    "configLevel": "amplifyAdmin"
+  "devenv": {
+    "configLevel": "project",
+    "useProfile": true,
+    "profileName": "default"
   }
 }

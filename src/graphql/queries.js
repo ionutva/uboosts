@@ -36,10 +36,6 @@ export const listTasks = /* GraphQL */ `
         title
         dueDate
         description
-        assignee {
-          fullName
-          avatar
-        }
         tags
         isCompleted
         isDeleted
@@ -73,10 +69,6 @@ export const syncTasks = /* GraphQL */ `
         title
         dueDate
         description
-        assignee {
-          fullName
-          avatar
-        }
         tags
         isCompleted
         isDeleted

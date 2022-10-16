@@ -1,16 +1,16 @@
 {
   "providers": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-uboosts-dev-151451-authRole",
-      "UnauthRoleArn": "arn:aws:iam::657271126817:role/amplify-uboosts-dev-151451-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::657271126817:role/amplify-uboosts-dev-151451-authRole",
+      "AuthRoleName": "amplify-uboosts-devenv-224522-authRole",
+      "UnauthRoleArn": "arn:aws:iam::657271126817:role/amplify-uboosts-devenv-224522-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::657271126817:role/amplify-uboosts-devenv-224522-authRole",
       "Region": "eu-central-1",
-      "DeploymentBucketName": "amplify-uboosts-dev-151451-deployment",
-      "UnauthRoleName": "amplify-uboosts-dev-151451-unauthRole",
-      "StackName": "amplify-uboosts-dev-151451",
-      "StackId": "arn:aws:cloudformation:eu-central-1:657271126817:stack/amplify-uboosts-dev-151451/75d7f410-44c0-11ed-83a6-0285534b2e8e",
+      "DeploymentBucketName": "amplify-uboosts-devenv-224522-deployment",
+      "UnauthRoleName": "amplify-uboosts-devenv-224522-unauthRole",
+      "StackName": "amplify-uboosts-devenv-224522",
+      "StackId": "arn:aws:cloudformation:eu-central-1:657271126817:stack/amplify-uboosts-devenv-224522/0d502b60-4cdb-11ed-bca6-02279e053300",
       "AmplifyAppId": "d1pp2sez9clg6y",
-      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-151451-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-uboosts-devenv-224522-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     }
   },
   "function": {
@@ -20,18 +20,18 @@
       "service": "Lambda",
       "output": {
         "Region": "eu-central-1",
-        "Arn": "arn:aws:lambda:eu-central-1:657271126817:function:uboosts0d0125f8CustomMessage-dev",
-        "Name": "uboosts0d0125f8CustomMessage-dev",
-        "LambdaExecutionRole": "uboosts0d0125f8CustomMessage-dev"
+        "Arn": "arn:aws:lambda:eu-central-1:657271126817:function:uboosts0d0125f8CustomMessage-devenv",
+        "Name": "uboosts0d0125f8CustomMessage-devenv",
+        "LambdaExecutionRole": "uboosts0d0125f8CustomMessage-devenv"
       },
-      "lastPushTimeStamp": "2022-10-12T10:11:18.227Z",
+      "lastPushTimeStamp": "2022-10-16T17:56:02.325Z",
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-151451-deployment/amplify-cfn-templates/function/uboosts0d0125f8CustomMessage-cloudformation-template.json",
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-devenv-224522-deployment/amplify-cfn-templates/function/uboosts0d0125f8CustomMessage-cloudformation-template.json",
         "logicalId": "functionuboosts0d0125f8CustomMessage"
       },
       "s3Bucket": {
-        "deploymentBucketName": "amplify-uboosts-dev-151451-deployment",
-        "s3Key": "amplify-builds/uboosts0d0125f8CustomMessage-614f716a697769554a52-build.zip"
+        "deploymentBucketName": "amplify-uboosts-devenv-224522-deployment",
+        "s3Key": "amplify-builds/uboosts0d0125f8CustomMessage-4971717a615871613536-build.zip"
       }
     }
   },
@@ -70,17 +70,17 @@
         ]
       },
       "output": {
-        "UserPoolId": "eu-central-1_CbMv2ye6I",
-        "AppClientIDWeb": "1s3gn4jic6p47vtifu9nhj0oaf",
-        "AppClientID": "41s07e6jt2ed5iltsu74v71tpn",
-        "IdentityPoolId": "eu-central-1:98de309b-7be9-4e89-87b6-fa2562f30518",
-        "UserPoolArn": "arn:aws:cognito-idp:eu-central-1:657271126817:userpool/eu-central-1_CbMv2ye6I",
-        "IdentityPoolName": "uboosts0d0125f8_identitypool_0d0125f8__dev",
+        "UserPoolId": "eu-central-1_H5mhv1YqE",
+        "AppClientIDWeb": "4tno7tufa33q6bt99osb2q3929",
+        "AppClientID": "234976o7ip5ulmoafvfslqep3o",
+        "IdentityPoolId": "eu-central-1:d1b6d584-c4ab-44ca-ae2b-34a8a3a150a2",
+        "UserPoolArn": "arn:aws:cognito-idp:eu-central-1:657271126817:userpool/eu-central-1_H5mhv1YqE",
+        "IdentityPoolName": "uboosts0d0125f8_identitypool_0d0125f8__devenv",
         "UserPoolName": "uboosts0d0125f8_userpool_0d0125f8"
       },
-      "lastPushTimeStamp": "2022-10-12T10:11:18.235Z",
+      "lastPushTimeStamp": "2022-10-16T17:56:02.327Z",
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-151451-deployment/amplify-cfn-templates/auth/uboosts0d0125f8-cloudformation-template.json",
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-devenv-224522-deployment/amplify-cfn-templates/auth/uboosts0d0125f8-cloudformation-template.json",
         "logicalId": "authuboosts0d0125f8"
       }
     }
@@ -105,16 +105,16 @@
             }
           ]
         },
-        "GraphQLAPIIdOutput": "4idkfjjxiraxbnnrawqhgw77bi",
-        "GraphQLAPIEndpointOutput": "https://v22e5s3v4na7lawkbprfxotigq.appsync-api.eu-central-1.amazonaws.com/graphql",
-        "GraphQLAPIKeyOutput": "da2-6hxueqrgprabhgs4uj25fhevbq"
+        "GraphQLAPIIdOutput": "7wfn5u63tvakxfbqrkiy77cm54",
+        "GraphQLAPIEndpointOutput": "https://mohan2dbmfaftmlwcppjw53zea.appsync-api.eu-central-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-d2quwlqvznfvboi5ktag237c4y"
       },
-      "lastPushTimeStamp": "2022-10-12T10:11:23.869Z",
+      "lastPushTimeStamp": "2022-10-16T17:56:02.328Z",
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-151451-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-devenv-224522-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apiuboosts"
       },
-      "lastPushDirHash": "wyjBvt2PC4/o9VnXza9Mx538FFY="
+      "lastPushDirHash": "iozScg8hpcc9HKG4u6VdcY1pTC8="
     }
   },
   "storage": {
@@ -123,12 +123,12 @@
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "output": {
-        "BucketName": "uboostsphotos151451-dev",
+        "BucketName": "uboostsphotos224522-devenv",
         "Region": "eu-central-1"
       },
-      "lastPushTimeStamp": "2022-10-12T10:11:18.241Z",
+      "lastPushTimeStamp": "2022-10-16T17:56:03.209Z",
       "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-151451-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-devenv-224522-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
         "logicalId": "storagephotos"
       }
     }

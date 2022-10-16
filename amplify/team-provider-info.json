@@ -1,41 +1,16 @@
 {
-  "dev": {
+  "devenv": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-uboosts-dev-151451-authRole",
-      "UnauthRoleArn": "arn:aws:iam::657271126817:role/amplify-uboosts-dev-151451-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::657271126817:role/amplify-uboosts-dev-151451-authRole",
+      "AuthRoleName": "amplify-uboosts-devenv-224522-authRole",
+      "UnauthRoleArn": "arn:aws:iam::657271126817:role/amplify-uboosts-devenv-224522-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::657271126817:role/amplify-uboosts-devenv-224522-authRole",
       "Region": "eu-central-1",
-      "DeploymentBucketName": "amplify-uboosts-dev-151451-deployment",
-      "UnauthRoleName": "amplify-uboosts-dev-151451-unauthRole",
-      "StackName": "amplify-uboosts-dev-151451",
-      "StackId": "arn:aws:cloudformation:eu-central-1:657271126817:stack/amplify-uboosts-dev-151451/75d7f410-44c0-11ed-83a6-0285534b2e8e",
+      "DeploymentBucketName": "amplify-uboosts-devenv-224522-deployment",
+      "UnauthRoleName": "amplify-uboosts-devenv-224522-unauthRole",
+      "StackName": "amplify-uboosts-devenv-224522",
+      "StackId": "arn:aws:cloudformation:eu-central-1:657271126817:stack/amplify-uboosts-devenv-224522/0d502b60-4cdb-11ed-bca6-02279e053300",
       "AmplifyAppId": "d1pp2sez9clg6y",
-      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-151451-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
-    },
-    "categories": {
-      "function": {
-        "uboosts0d0125f8CustomMessage": {
-          "deploymentBucketName": "amplify-uboosts-dev-151451-deployment",
-          "s3Key": "amplify-builds/uboosts0d0125f8CustomMessage-614f716a697769554a52-build.zip"
-        }
-      },
-      "auth": {
-        "uboosts0d0125f8": {}
-      }
-    }
-  },
-  "staging": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-amplify97c94e24b9b74-staging-62536-authRole",
-      "UnauthRoleArn": "arn:aws:iam::657271126817:role/amplify-amplify97c94e24b9b74-staging-62536-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::657271126817:role/amplify-amplify97c94e24b9b74-staging-62536-authRole",
-      "Region": "eu-central-1",
-      "DeploymentBucketName": "amplify-amplify97c94e24b9b74-staging-62536-deployment",
-      "UnauthRoleName": "amplify-amplify97c94e24b9b74-staging-62536-unauthRole",
-      "StackName": "amplify-amplify97c94e24b9b74-staging-62536",
-      "StackId": "arn:aws:cloudformation:eu-central-1:657271126817:stack/amplify-amplify97c94e24b9b74-staging-62536/de469070-3c9a-11ed-817b-02dc251d29b2",
-      "AmplifyAppId": "d1pp2sez9clg6y",
-      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-amplify97c94e24b9b74-staging-62536-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-uboosts-devenv-224522-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "auth": {
@@ -43,33 +18,9 @@
       },
       "function": {
         "uboosts0d0125f8CustomMessage": {
-          "REDIRECTURL": "uboosts.com",
-          "EMAILSUBJECT": "uBoosts Account Confirmation",
-          "EMAILMESSAGE": "Click here to verify your email: ",
-          "deploymentBucketName": "amplify-amplify97c94e24b9b74-staging-62536-deployment",
-          "s3Key": "amplify-builds/uboosts0d0125f8CustomMessage-6a35473372386f765339-build.zip"
+          "deploymentBucketName": "amplify-uboosts-devenv-224522-deployment",
+          "s3Key": "amplify-builds/uboosts0d0125f8CustomMessage-4971717a615871613536-build.zip"
         }
-      }
-    }
-  },
-  "test": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-uboosts-test-224842-authRole",
-      "UnauthRoleArn": "arn:aws:iam::657271126817:role/amplify-uboosts-test-224842-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::657271126817:role/amplify-uboosts-test-224842-authRole",
-      "Region": "eu-central-1",
-      "DeploymentBucketName": "amplify-uboosts-test-224842-deployment",
-      "UnauthRoleName": "amplify-uboosts-test-224842-unauthRole",
-      "StackName": "amplify-uboosts-test-224842",
-      "StackId": "arn:aws:cloudformation:eu-central-1:657271126817:stack/amplify-uboosts-test-224842/baa907c0-44e6-11ed-9d94-020aeb45e49c",
-      "AmplifyAppId": "d1pp2sez9clg6y"
-    },
-    "categories": {
-      "auth": {
-        "uboosts0d0125f8": {}
-      },
-      "function": {
-        "uboosts0d0125f8CustomMessage": {}
       }
     }
   }
