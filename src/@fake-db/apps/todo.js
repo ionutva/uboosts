@@ -288,11 +288,11 @@ import { updateTask, createTask, deleteTask } from '../../graphql/mutations'
 let data = {};
 
 mock.onGet('/apps/todo/tasks').reply(async config => {
-
   const tasks = await API.graphql({
     query: listTasks
   })
   data.tasks = tasks.data.listTasks.items
+  //.where((item) => !item['_deleted']).toList()
 
   // eslint-disable-next-line object-curly-newline
   const { q = '', filter, tag, sortBy: sortByParam = 'latest' } = config.params
@@ -413,7 +413,10 @@ mock.onPost('/apps/todo/add-tasks').reply(async config => {
    to apply updates to the item’s fields rather than mutating the instance directly */
 
   // Get event from post data
-    const { task } = JSON.parse(config.data)
+
+  const { task } = JSON.parse(config.data)
+
+
 
   const { length } = data.tasks
   let lastIndex = 0
@@ -422,9 +425,11 @@ mock.onPost('/apps/todo/add-tasks').reply(async config => {
   }
   task.id = lastIndex + 1
 
-  data.tasks.push(task)
   
-  await API.graphql({ query: createTask({ input: task }) })
+  data.tasks.push(task)
+
+  
+  console.log(await API.graphql({ query: createTask({ input: task }) }))
 
   return [201, { task }]
 })
