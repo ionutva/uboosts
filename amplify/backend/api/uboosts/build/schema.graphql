@@ -1,10 +1,11 @@
 
 type Task @aws_iam @aws_api_key {
-  id: ID!
+  aid: ID
+  id: Int!
   title: String
   dueDate: AWSDate
   description: String
-  assignee: Assignee
+  assignee: [Assignee]
   tags: [String]
   isCompleted: Boolean
   isDeleted: Boolean
@@ -17,7 +18,7 @@ type Task @aws_iam @aws_api_key {
 }
 
 type Assignee @aws_iam @aws_api_key {
-  fullName: String
+  fullName: String!
   avatar: String
 }
 
@@ -172,7 +173,7 @@ enum ModelSortDirection {
 }
 
 input AssigneeInput {
-  fullName: String
+  fullName: String!
   avatar: String
 }
 
@@ -183,7 +184,8 @@ type ModelTaskConnection @aws_api_key @aws_iam {
 }
 
 input ModelTaskFilterInput {
-  id: ModelIDInput
+  aid: ModelIDInput
+  id: ModelIntInput
   title: ModelStringInput
   dueDate: ModelStringInput
   description: ModelStringInput
@@ -203,6 +205,8 @@ type Query {
 }
 
 input ModelTaskConditionInput {
+  aid: ModelIDInput
+  id: ModelIntInput
   title: ModelStringInput
   dueDate: ModelStringInput
   description: ModelStringInput
@@ -216,11 +220,12 @@ input ModelTaskConditionInput {
 }
 
 input CreateTaskInput {
-  id: ID
+  aid: ID
+  id: Int
   title: String
   dueDate: AWSDate
   description: String
-  assignee: AssigneeInput
+  assignee: [AssigneeInput]
   tags: [String]
   isCompleted: Boolean
   isDeleted: Boolean
@@ -229,11 +234,12 @@ input CreateTaskInput {
 }
 
 input UpdateTaskInput {
-  id: ID!
+  aid: ID
+  id: Int!
   title: String
   dueDate: AWSDate
   description: String
-  assignee: AssigneeInput
+  assignee: [AssigneeInput]
   tags: [String]
   isCompleted: Boolean
   isDeleted: Boolean
@@ -252,9 +258,23 @@ type Mutation {
   deleteTask(input: DeleteTaskInput!, condition: ModelTaskConditionInput): Task @aws_api_key @aws_iam
 }
 
+input ModelSubscriptionTaskFilterInput {
+  aid: ModelSubscriptionIDInput
+  id: ModelSubscriptionIntInput
+  title: ModelSubscriptionStringInput
+  dueDate: ModelSubscriptionStringInput
+  description: ModelSubscriptionStringInput
+  tags: ModelSubscriptionStringInput
+  isCompleted: ModelSubscriptionBooleanInput
+  isDeleted: ModelSubscriptionBooleanInput
+  isImportant: ModelSubscriptionBooleanInput
+  and: [ModelSubscriptionTaskFilterInput]
+  or: [ModelSubscriptionTaskFilterInput]
+}
+
 type Subscription {
-  onCreateTask: Task @aws_subscribe(mutations: ["createTask"]) @aws_api_key @aws_iam
-  onUpdateTask: Task @aws_subscribe(mutations: ["updateTask"]) @aws_api_key @aws_iam
-  onDeleteTask: Task @aws_subscribe(mutations: ["deleteTask"]) @aws_api_key @aws_iam
+  onCreateTask(filter: ModelSubscriptionTaskFilterInput): Task @aws_subscribe(mutations: ["createTask"]) @aws_api_key @aws_iam
+  onUpdateTask(filter: ModelSubscriptionTaskFilterInput): Task @aws_subscribe(mutations: ["updateTask"]) @aws_api_key @aws_iam
+  onDeleteTask(filter: ModelSubscriptionTaskFilterInput): Task @aws_subscribe(mutations: ["deleteTask"]) @aws_api_key @aws_iam
 }
 

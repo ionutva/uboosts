@@ -194,12 +194,6 @@ export default [
         navLink: '/components/tabs-component'
       },
       {
-        id: 'timeline',
-        title: 'Timeline',
-        icon: <Circle size={12} />,
-        navLink: '/components/timeline'
-      },
-      {
         id: 'toasts',
         title: 'Toasts',
         icon: <Circle size={12} />,

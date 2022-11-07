@@ -3,33 +3,14 @@
 
 const awsmobile = {
     "aws_project_region": "eu-central-1",
-    "aws_cognito_identity_pool_id": "eu-central-1:d1b6d584-c4ab-44ca-ae2b-34a8a3a150a2",
-    "aws_cognito_region": "eu-central-1",
-    "aws_user_pools_id": "eu-central-1_H5mhv1YqE",
-    "aws_user_pools_web_client_id": "4tno7tufa33q6bt99osb2q3929",
-    "oauth": {},
-    "aws_cognito_username_attributes": [],
-    "aws_cognito_social_providers": [],
-    "aws_cognito_signup_attributes": [
-        "EMAIL"
-    ],
-    "aws_cognito_mfa_configuration": "OFF",
-    "aws_cognito_mfa_types": [
-        "SMS"
-    ],
-    "aws_cognito_password_protection_settings": {
-        "passwordPolicyMinLength": 8,
-        "passwordPolicyCharacters": []
-    },
-    "aws_cognito_verification_mechanisms": [
-        "EMAIL"
-    ],
-    "aws_appsync_graphqlEndpoint": "https://mohan2dbmfaftmlwcppjw53zea.appsync-api.eu-central-1.amazonaws.com/graphql",
+    "aws_appsync_graphqlEndpoint": "http://192.168.100.38:20002/graphql",
     "aws_appsync_region": "eu-central-1",
     "aws_appsync_authenticationType": "API_KEY",
-    "aws_appsync_apiKey": "da2-d2quwlqvznfvboi5ktag237c4y",
-    "aws_user_files_s3_bucket": "uboostsphotos224522-devenv",
-    "aws_user_files_s3_bucket_region": "eu-central-1"
+    "aws_appsync_apiKey": "da2-fakeApiId123456",
+    "aws_appsync_dangerously_connect_to_http_endpoint_for_testing": true,
+    "aws_user_files_s3_bucket": "uboostsphotos-dev",
+    "aws_user_files_s3_bucket_region": "eu-central-1",
+    "aws_user_files_s3_dangerously_connect_to_http_endpoint_for_testing": true
 };
 
 

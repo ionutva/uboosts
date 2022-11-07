@@ -2,8 +2,9 @@
 // this is an auto generated file. This will be overwritten
 
 export const onCreateTask = /* GraphQL */ `
-  subscription OnCreateTask {
-    onCreateTask {
+  subscription OnCreateTask($filter: ModelSubscriptionTaskFilterInput) {
+    onCreateTask(filter: $filter) {
+      aid
       id
       title
       dueDate
@@ -25,8 +26,9 @@ export const onCreateTask = /* GraphQL */ `
   }
 `;
 export const onUpdateTask = /* GraphQL */ `
-  subscription OnUpdateTask {
-    onUpdateTask {
+  subscription OnUpdateTask($filter: ModelSubscriptionTaskFilterInput) {
+    onUpdateTask(filter: $filter) {
+      aid
       id
       title
       dueDate
@@ -48,8 +50,9 @@ export const onUpdateTask = /* GraphQL */ `
   }
 `;
 export const onDeleteTask = /* GraphQL */ `
-  subscription OnDeleteTask {
-    onDeleteTask {
+  subscription OnDeleteTask($filter: ModelSubscriptionTaskFilterInput) {
+    onDeleteTask(filter: $filter) {
+      aid
       id
       title
       dueDate

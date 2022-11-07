@@ -10,4 +10,4 @@ import dashboards from './dashboards'
 import uiElements from './ui-elements'
 
 // ** Merge & Export
-export default [...uboosts, ...dashboards, ...apps, ...pages, ...uiElements, ...forms, ...tables, ...charts, ...others]
+export default [...uboosts]

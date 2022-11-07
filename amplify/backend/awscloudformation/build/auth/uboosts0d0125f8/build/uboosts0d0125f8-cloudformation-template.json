@@ -1,5 +1,5 @@
 {
-  "Description": "{\"createdOn\":\"Linux\",\"createdBy\":\"AmplifyAdmin\",\"createdWith\":\"10.2.1-rc.cf54accdc.0\",\"stackType\":\"auth-Cognito\",\"metadata\":{}}",
+  "Description": "{\"createdOn\":\"Linux\",\"createdBy\":\"Amplify\",\"createdWith\":\"10.3.0\",\"stackType\":\"auth-Cognito\",\"metadata\":{}}",
   "AWSTemplateFormatVersion": "2010-09-09",
   "Parameters": {
     "env": {
@@ -235,6 +235,11 @@
             "Required": true
           }
         ],
+        "UserAttributeUpdateSettings": {
+          "AttributesRequireVerificationBeforeUpdate": [
+            "email"
+          ]
+        },
         "UsernameConfiguration": {
           "CaseSensitive": false
         },

@@ -6,8 +6,15 @@ export const schema = {
                 "id": {
                     "name": "id",
                     "isArray": false,
-                    "type": "ID",
+                    "type": "Int",
                     "isRequired": true,
+                    "attributes": []
+                },
+                "aid": {
+                    "name": "aid",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": false,
                     "attributes": []
                 },
                 "title": {
@@ -33,12 +40,13 @@ export const schema = {
                 },
                 "assignee": {
                     "name": "assignee",
-                    "isArray": false,
+                    "isArray": true,
                     "type": {
                         "nonModel": "Assignee"
                     },
                     "isRequired": false,
-                    "attributes": []
+                    "attributes": [],
+                    "isArrayNullable": true
                 },
                 "tags": {
                     "name": "tags",
@@ -121,7 +129,7 @@ export const schema = {
                     "name": "fullName",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": false,
+                    "isRequired": true,
                     "attributes": []
                 },
                 "avatar": {
@@ -134,5 +142,6 @@ export const schema = {
             }
         }
     },
-    "version": "52edd7ef480adf80c9229d3486bc3de8"
+    "codegenVersion": "3.3.1",
+    "version": "d90fdfd8ed00b6c8dd080b204a465615"
 };

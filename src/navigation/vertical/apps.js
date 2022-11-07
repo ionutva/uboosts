@@ -6,36 +6,6 @@ export default [
     header: 'Apps & Pages'
   },
   {
-    id: 'email',
-    title: 'Email',
-    icon: <Mail size={20} />,
-    navLink: '/apps/email'
-  },
-  {
-    id: 'chat',
-    title: 'Chat',
-    icon: <MessageSquare size={20} />,
-    navLink: '/apps/chat'
-  },
-  {
-    id: 'todo',
-    title: 'Todo',
-    icon: <CheckSquare size={20} />,
-    navLink: '/apps/todo'
-  },
-  {
-    id: 'calendar',
-    title: 'Calendar',
-    icon: <Calendar size={20} />,
-    navLink: '/apps/calendar'
-  },
-  {
-    id: 'kanban',
-    title: 'Kanban',
-    icon: <CheckSquare size={20} />,
-    navLink: '/apps/kanban'
-  },
-  {
     id: 'invoiceApp',
     title: 'Invoice',
     icon: <FileText size={20} />,
