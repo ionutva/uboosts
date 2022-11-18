@@ -4,8 +4,8 @@
 export const onCreateTask = /* GraphQL */ `
   subscription OnCreateTask($filter: ModelSubscriptionTaskFilterInput) {
     onCreateTask(filter: $filter) {
-      aid
       id
+      uid
       title
       dueDate
       description
@@ -28,8 +28,8 @@ export const onCreateTask = /* GraphQL */ `
 export const onUpdateTask = /* GraphQL */ `
   subscription OnUpdateTask($filter: ModelSubscriptionTaskFilterInput) {
     onUpdateTask(filter: $filter) {
-      aid
       id
+      uid
       title
       dueDate
       description
@@ -52,8 +52,8 @@ export const onUpdateTask = /* GraphQL */ `
 export const onDeleteTask = /* GraphQL */ `
   subscription OnDeleteTask($filter: ModelSubscriptionTaskFilterInput) {
     onDeleteTask(filter: $filter) {
-      aid
       id
+      uid
       title
       dueDate
       description

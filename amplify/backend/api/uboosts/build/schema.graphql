@@ -1,7 +1,7 @@
 
 type Task @aws_iam @aws_api_key {
-  aid: ID
-  id: Int!
+  id: ID!
+  uid: Int
   title: String
   dueDate: AWSDate
   description: String
@@ -184,8 +184,8 @@ type ModelTaskConnection @aws_api_key @aws_iam {
 }
 
 input ModelTaskFilterInput {
-  aid: ModelIDInput
-  id: ModelIntInput
+  id: ModelIDInput
+  uid: ModelIntInput
   title: ModelStringInput
   dueDate: ModelStringInput
   description: ModelStringInput
@@ -205,8 +205,7 @@ type Query {
 }
 
 input ModelTaskConditionInput {
-  aid: ModelIDInput
-  id: ModelIntInput
+  uid: ModelIntInput
   title: ModelStringInput
   dueDate: ModelStringInput
   description: ModelStringInput
@@ -220,8 +219,8 @@ input ModelTaskConditionInput {
 }
 
 input CreateTaskInput {
-  aid: ID
-  id: Int
+  id: ID
+  uid: Int
   title: String
   dueDate: AWSDate
   description: String
@@ -234,8 +233,8 @@ input CreateTaskInput {
 }
 
 input UpdateTaskInput {
-  aid: ID
-  id: Int!
+  id: ID!
+  uid: Int
   title: String
   dueDate: AWSDate
   description: String
@@ -259,8 +258,8 @@ type Mutation {
 }
 
 input ModelSubscriptionTaskFilterInput {
-  aid: ModelSubscriptionIDInput
-  id: ModelSubscriptionIntInput
+  id: ModelSubscriptionIDInput
+  uid: ModelSubscriptionIntInput
   title: ModelSubscriptionStringInput
   dueDate: ModelSubscriptionStringInput
   description: ModelSubscriptionStringInput

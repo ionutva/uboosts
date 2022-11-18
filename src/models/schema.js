@@ -6,14 +6,14 @@ export const schema = {
                 "id": {
                     "name": "id",
                     "isArray": false,
-                    "type": "Int",
+                    "type": "ID",
                     "isRequired": true,
                     "attributes": []
                 },
-                "aid": {
-                    "name": "aid",
+                "uid": {
+                    "name": "uid",
                     "isArray": false,
-                    "type": "ID",
+                    "type": "Int",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -143,5 +143,5 @@ export const schema = {
         }
     },
     "codegenVersion": "3.3.1",
-    "version": "d90fdfd8ed00b6c8dd080b204a465615"
+    "version": "ac436fb17cc4b5ffa80b6bb92d7c20b2"
 };

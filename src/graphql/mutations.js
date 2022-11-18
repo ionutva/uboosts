@@ -7,8 +7,8 @@ export const createTask = /* GraphQL */ `
     $condition: ModelTaskConditionInput
   ) {
     createTask(input: $input, condition: $condition) {
-      aid
       id
+      uid
       title
       dueDate
       description
@@ -34,8 +34,8 @@ export const updateTask = /* GraphQL */ `
     $condition: ModelTaskConditionInput
   ) {
     updateTask(input: $input, condition: $condition) {
-      aid
       id
+      uid
       title
       dueDate
       description
@@ -61,8 +61,8 @@ export const deleteTask = /* GraphQL */ `
     $condition: ModelTaskConditionInput
   ) {
     deleteTask(input: $input, condition: $condition) {
-      aid
       id
+      uid
       title
       dueDate
       description

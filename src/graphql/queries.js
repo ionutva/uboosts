@@ -4,8 +4,8 @@
 export const getTask = /* GraphQL */ `
   query GetTask($id: ID!) {
     getTask(id: $id) {
-      aid
       id
+      uid
       title
       dueDate
       description
@@ -33,8 +33,8 @@ export const listTasks = /* GraphQL */ `
   ) {
     listTasks(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
-        aid
         id
+        uid
         title
         dueDate
         description
@@ -67,8 +67,8 @@ export const syncTasks = /* GraphQL */ `
       lastSync: $lastSync
     ) {
       items {
-        aid
         id
+        uid
         title
         dueDate
         description

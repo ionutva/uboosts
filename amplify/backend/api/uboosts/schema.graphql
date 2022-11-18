@@ -1,6 +1,6 @@
 type Task @model @auth(rules: [{allow: public}]) {
-  aid:ID
-  id: Int!
+  id: ID!
+  uid:Int
   title: String
   dueDate: AWSDate
   description: String
