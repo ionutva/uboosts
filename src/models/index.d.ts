@@ -21,12 +21,11 @@ type TaskMetaData = {
 }
 
 type EagerTask = {
-  readonly id: string;
-  readonly uid?: number | null;
+  readonly id: number;
   readonly title?: string | null;
   readonly dueDate?: string | null;
   readonly description?: string | null;
-  readonly assignee?: (Assignee | null)[] | null;
+  readonly assignee?: Assignee | null;
   readonly tags?: (string | null)[] | null;
   readonly isCompleted?: boolean | null;
   readonly isDeleted?: boolean | null;
@@ -36,12 +35,11 @@ type EagerTask = {
 }
 
 type LazyTask = {
-  readonly id: string;
-  readonly uid?: number | null;
+  readonly id: number;
   readonly title?: string | null;
   readonly dueDate?: string | null;
   readonly description?: string | null;
-  readonly assignee?: (Assignee | null)[] | null;
+  readonly assignee?: Assignee | null;
   readonly tags?: (string | null)[] | null;
   readonly isCompleted?: boolean | null;
   readonly isDeleted?: boolean | null;

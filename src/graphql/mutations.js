@@ -8,7 +8,6 @@ export const createTask = /* GraphQL */ `
   ) {
     createTask(input: $input, condition: $condition) {
       id
-      uid
       title
       dueDate
       description
@@ -35,7 +34,6 @@ export const updateTask = /* GraphQL */ `
   ) {
     updateTask(input: $input, condition: $condition) {
       id
-      uid
       title
       dueDate
       description
@@ -62,7 +60,6 @@ export const deleteTask = /* GraphQL */ `
   ) {
     deleteTask(input: $input, condition: $condition) {
       id
-      uid
       title
       dueDate
       description

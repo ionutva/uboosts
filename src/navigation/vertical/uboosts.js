@@ -9,7 +9,7 @@ export default [
     navLink: '/components/timeline'
   },
   {
-    id: 'timeline',
+    id: 'profile',
     title: 'My Page',
     icon: <Circle size={12} />,
     navLink: '/pages/profile'

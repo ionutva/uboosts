@@ -656,8 +656,8 @@ const data = {
     {
       id: 24,
       from: {
-        email: 'douldcottj@yellowpages.com',
-        name: 'Dalila Ouldcott',
+        email: 'douldcottj@yellowpages.comm',
+        name: 'Dalilay Ouldcott',
         avatar: require('@src/assets/images/avatars/1.png').default
       },
       to: [

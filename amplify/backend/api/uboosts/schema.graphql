@@ -1,10 +1,9 @@
 type Task @model @auth(rules: [{allow: public}]) {
-  id: ID!
-  uid:Int
+  id:Int! 
   title: String
   dueDate: AWSDate
   description: String
-  assignee: [Assignee]
+  assignee: Assignee
   tags: [String]
   isCompleted: Boolean
   isDeleted: Boolean

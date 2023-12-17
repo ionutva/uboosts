@@ -5,7 +5,6 @@ export const onCreateTask = /* GraphQL */ `
   subscription OnCreateTask($filter: ModelSubscriptionTaskFilterInput) {
     onCreateTask(filter: $filter) {
       id
-      uid
       title
       dueDate
       description
@@ -29,7 +28,6 @@ export const onUpdateTask = /* GraphQL */ `
   subscription OnUpdateTask($filter: ModelSubscriptionTaskFilterInput) {
     onUpdateTask(filter: $filter) {
       id
-      uid
       title
       dueDate
       description
@@ -53,7 +51,6 @@ export const onDeleteTask = /* GraphQL */ `
   subscription OnDeleteTask($filter: ModelSubscriptionTaskFilterInput) {
     onDeleteTask(filter: $filter) {
       id
-      uid
       title
       dueDate
       description

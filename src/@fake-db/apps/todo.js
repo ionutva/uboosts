@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import mock from '../mock'
 
-import { API } from 'aws-amplify'
+import { API, graphqlOperation  } from 'aws-amplify'
 import { listTasks } from '../../graphql/queries'
 import { updateTask, createTask, deleteTask } from '../../graphql/mutations'
 import { Task } from '../../models'
@@ -283,7 +283,27 @@ import { DataStore } from '@aws-amplify/datastore'
 // };
 let data = {tasks:[]};
 let getData = async () => {
-data.tasks = await DataStore.query(Task);
+//data.tasks = await DataStore.query(Task);
+data = await API.graphql(graphqlOperation(` 
+query MyQuery {
+  listTasks {
+    items {
+      id
+      assignee {
+        avatar
+        fullName
+      }
+      description
+      dueDate
+      isCompleted
+      isDeleted
+      isImportant
+      tags
+      title
+    }
+}
+}
+`))
 
 }
 
@@ -294,7 +314,8 @@ data.tasks = await DataStore.query(Task);
 mock.onGet('/apps/todo/tasks').reply(async config => {
   
   await getData()
-  console.log(data);
+  data.tasks=  data.data.listTasks.items
+  
   // eslint-disable-next-line object-curly-newline
   const { q = '', filter, tag, sortBy: sortByParam = 'latest' } = config.params
   /* eslint-enable */
@@ -469,8 +490,23 @@ mock.onPost('/apps/todo/update-task').reply(async config => {
   //   isImportant: true,
   // }
   //const update = { ...exclude(['createdAt', 'updatedAt'], user), ...input };
+  
 
-  //const err = await API.graphql({ query: updateTask, variables: { input: input } })
+  const err = await API.graphql({ query: updateTask, variables: { input:{
+           id: 1,
+           title: 'Hire 5 new Fresher or Experienced, frontend and backend developers ',
+           dueDate: '2020-12-12',
+           description:
+             'Chocolate cake topping bonbon jujubes donut sweet wafer. Marzipan gingerbread powder brownie bear claw. Chocolate bonbon sesame snaps jelly caramels oat cake.',
+           assignee: {
+             fullName: 'Darlene Shields',
+             avatar: require('@src/assets/images/avatars/1.png').default
+           },
+           tags: ['low'],
+           isCompleted: true,
+           isDeleted: false,
+           isImportant: false
+         }} })
 
 
   return [200, { task }]

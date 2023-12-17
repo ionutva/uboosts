@@ -2,10 +2,9 @@
 // this is an auto generated file. This will be overwritten
 
 export const getTask = /* GraphQL */ `
-  query GetTask($id: ID!) {
+  query GetTask($id: Int!) {
     getTask(id: $id) {
       id
-      uid
       title
       dueDate
       description
@@ -27,14 +26,21 @@ export const getTask = /* GraphQL */ `
 `;
 export const listTasks = /* GraphQL */ `
   query ListTasks(
+    $id: Int
     $filter: ModelTaskFilterInput
     $limit: Int
     $nextToken: String
+    $sortDirection: ModelSortDirection
   ) {
-    listTasks(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listTasks(
+      id: $id
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      sortDirection: $sortDirection
+    ) {
       items {
         id
-        uid
         title
         dueDate
         description
@@ -68,7 +74,6 @@ export const syncTasks = /* GraphQL */ `
     ) {
       items {
         id
-        uid
         title
         dueDate
         description

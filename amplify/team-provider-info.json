@@ -9,15 +9,22 @@
       "UnauthRoleName": "amplify-uboosts-dev-95015-unauthRole",
       "StackName": "amplify-uboosts-dev-95015",
       "StackId": "arn:aws:cloudformation:eu-central-1:657271126817:stack/amplify-uboosts-dev-95015/990d9190-505c-11ed-a859-0230153331ea",
-      "AmplifyAppId": "d2yv7ynnk3clrh",
-      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-95015-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+      "AmplifyAppId": "d2yv7ynnk3clrh"
     },
     "categories": {
+      "storage": {
+        "photos": {},
+        "Taskvf4bqtwdababliprabhh5pwgd4dev": {
+          "tableName": "Task-vf4bqtwdababliprabhh5pwgd4-dev",
+          "region": "eu-central-1",
+          "arn": "arn:aws:dynamodb:eu-central-1:657271126817:table/Task-vf4bqtwdababliprabhh5pwgd4-dev",
+          "streamArn": "arn:aws:dynamodb:eu-central-1:657271126817:table/Task-vf4bqtwdababliprabhh5pwgd4-dev/stream/2022-11-19T19:13:28.675",
+          "partitionKeyName": "id",
+          "partitionKeyType": "N"
+        }
+      },
       "api": {
         "uboosts": {}
-      },
-      "storage": {
-        "photos": {}
       }
     }
   }

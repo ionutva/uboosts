@@ -38,12 +38,12 @@
         "GraphQLAPIEndpointOutput": "https://waocysp5unhzlcqu7gn37fnjdi.appsync-api.eu-central-1.amazonaws.com/graphql",
         "GraphQLAPIKeyOutput": "da2-hv2zr7d7uvgnjfhf36ppcdozz4"
       },
-      "lastPushTimeStamp": "2022-11-15T23:29:42.642Z",
+      "lastPushTimeStamp": "2022-11-19T23:32:11.341Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-95015-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apiuboosts"
       },
-      "lastPushDirHash": "eY6a50/gXUkHQQE4kaJFjrjCrVU="
+      "lastPushDirHash": "fDNOmKA1MplY56e3Wr+uLMhxGWI="
     }
   },
   "storage": {
@@ -55,7 +55,7 @@
         "BucketName": "uboostsphotos95015-dev",
         "Region": "eu-central-1"
       },
-      "lastPushTimeStamp": "2022-11-15T23:29:40.587Z",
+      "lastPushTimeStamp": "2022-11-19T23:32:03.916Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-uboosts-dev-95015-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
         "logicalId": "storagephotos"
